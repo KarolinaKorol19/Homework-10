@@ -18,7 +18,7 @@ const isEven = (num) => num % 2 === 0;
 const isLarge = (num) => num > 10;
 const isShort = (word) => word.length <= 3;
 
-// Тестування
+
 console.log("Парних чисел:", countItems(numbers, isEven));
 console.log("Чисел більше 10:", countItems(numbers, isLarge));
 console.log("Коротких слів:", countItems(words, isShort));
@@ -30,7 +30,6 @@ const calculate = (a, b, operation) => {
   return operation(a, b);
 };
 
-// Стрілкові функції для операцій тут
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
@@ -41,12 +40,11 @@ const divide = (a, b) => {
   return a / b;
 };
 
-// Тестування
-console.log(calculate(10, 5, add)); // Повинно показати 15
-console.log(calculate(10, 5, subtract)); // Повинно показати 5
-console.log(calculate(10, 5, multiply)); // Повинно показати 50
-console.log(calculate(10, 5, divide)); // Повинно показати 2
-console.log(calculate(10, 0, divide)); // Повинно показати помилку
+console.log(calculate(10, 5, add)); 
+console.log(calculate(10, 5, subtract)); 
+console.log(calculate(10, 5, multiply)); 
+console.log(calculate(10, 5, divide)); 
+console.log(calculate(10, 0, divide)); 
 
 // Завдання 3 Генератор повідомлень
 function repeatMessage(times, messageCreator) {
@@ -59,12 +57,11 @@ const simpleMessage = (i) => console.log(`Повідомлення №${i + 1}`)
 const greetMessage = (i) => console.log(`👋 Привіт! Це привітання №${i + 1}`);
 const countdownMessage = (i) => console.log(`Зворотний відлік: ${3 - i}`);
 
-// --- Тестування ---
-console.log("--- Просте повідомлення ---");
+console.log(" Просте повідомлення ");
 repeatMessage(3, simpleMessage);
-console.log("--- Вітання ---");
+console.log(" Вітання ");
 repeatMessage(5, greetMessage);
-console.log("--- Зворотний відлік ---");
+console.log(" Зворотний відлік ");
 repeatMessage(3, countdownMessage);
 
 // Завдання 4 Кінотеатр (творче та додаткове завдання)
@@ -83,7 +80,6 @@ function processMovies(movies, action) {
   }
 }
 
-// --- Колбек-функції ---
 const showMovie = (movie, index) => {
   console.log(`${index + 1}. ${movie}`);
 };
@@ -100,17 +96,16 @@ const countLetters = (movie) => {
   console.log(`"${movie}" має ${movie.length} літер`);
 };
 
-// --- Тестування ---
-console.log("--- Список фільмів ---");
+console.log(" Список фільмів");
 processMovies(movies, showMovie);
 
-console.log("\n--- З емоджі ---");
+console.log(" З емоджі");
 processMovies(movies, addEmoji);
 
-console.log("\n--- Перегляд фільмів ---");
+console.log("Перегляд фільмів");
 processMovies(movies, watchMovie);
 
-console.log("\n--- Кількість літер ---");
+console.log("Кількість літер");
 processMovies(movies, countLetters);
 
-// the end
+
